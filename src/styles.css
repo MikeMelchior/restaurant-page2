@@ -1,3 +1,114 @@
-p {
-    color: red;
+@font-face {
+    font-family: DancingScript;
+    src: url(./DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: PermanentMarker;
+    src: url(./PermanentMarker-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: PermanentMarker;
+}
+
+body,
+html {
+    min-height: 100vh;
+}
+.container {
+    min-height: 100vh;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url(./images.png);
+    opacity: 0.04;
+    max-width: 100%;
+}
+
+.button-container {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    padding: 2rem;
+}
+.button-container button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: aqua;
+    font-size: 20px;
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+}
+
+.page {
+    width: 60vw;
+    margin: auto;
+    padding: 3rem;
+    border: 10px ridge aqua;
+    background-color: #fee7f1;
+    text-align: center;
+}
+
+.page h1 {
+    font-family: DancingScript;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1rem 0;
+}
+
+.hero-container {
+    padding: 4rem 0rem;
+    margin: auto;
+    width: 70%;
+    font-size: 28px;
+    letter-spacing: 1.8px;
+    color: #9979b4;
+}
+
+.hero-container p:last-child{
+    text-align: end;
+    padding-right: 3rem;
+}
+
+.page p{
+    padding: 1rem 0rem;
+}
+
+.page > p {
+    margin-top: 40px;
+}
+
+.hours-container {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    border: 3px dotted purple;
+    border-radius: 10px;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.day:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.active {
+    color: purple;
 }
