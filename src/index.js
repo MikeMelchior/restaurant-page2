@@ -3,15 +3,10 @@ import { pageLoader } from "./page-load";
 import { pageOne } from "./page-one";
 
 
-const container = exports.createDiv('container');
-container.textContent = 'hello'
-
-// const someElement = exports.createNamedElement('div', 'another-div')
-// container.appendChild(someElement);
-
+const container = exports.createNamedElement('div', 'container');
 document.body.appendChild(container);
 
-pageLoader(pageOne())
+pageLoader(pageOne());
 
 
 

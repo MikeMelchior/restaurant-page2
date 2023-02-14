@@ -1,14 +1,18 @@
 import * as exports from './exports'
 
 const pageOne = () => {
-    const page = exports.createDiv('page-one');
-
-    const paraOne = exports.createP();
-    paraOne.textContent = 'Im am a paragraph';
+    const page = exports.createNamedElement('div', ('page'));
+    
+    const paraOne = exports.createNamedElement('p');
+    paraOne.textContent = 'Im a paragraph';
 
     page.appendChild(paraOne);
 
     return page
+}
+
+const pageTwo = () => {
+
 }
 
 export { pageOne }

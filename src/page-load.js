@@ -1,10 +1,8 @@
-
-
 const pageLoader = (page) => {
-    const container = document.querySelector('.container')
+    const container = document.querySelector('.container');
     container.innerHTML = '';
 
-    container.appendChild(page)
+    container.appendChild(page);
 }
 
 export { pageLoader }
