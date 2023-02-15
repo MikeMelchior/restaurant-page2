@@ -2,12 +2,10 @@
     font-family: DancingScript;
     src: url(./DancingScript-VariableFont_wght.ttf);
 }
-
 @font-face {
     font-family: PermanentMarker;
     src: url(./PermanentMarker-Regular.ttf);
 }
-
 
 * {
     margin: 0;
@@ -17,7 +15,8 @@
 
 body,
 html {
-    min-height: 100vh;
+    min-height: 100vh; 
+    position: relative;
 }
 .container {
     min-height: 100vh;
@@ -27,12 +26,13 @@ html {
     position: absolute;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 105%;
     width: 100vw;
     z-index: -1;
     background-image: url(./images.png);
     opacity: 0.04;
     max-width: 100%;
+    background-attachment: fixed;
 }
 
 .button-container {
@@ -42,32 +42,37 @@ html {
     gap: 20px;
     padding: 2rem;
 }
-.button-container button {
-    padding: 1rem 2rem;
-    border: none;
-    background-color: aqua;
-    font-size: 20px;
-}
-
-.button-container button:hover {
-    transform: scale(1.05);
-}
+    .button-container button {
+        padding: 1rem 2rem;
+        border: none;
+        background-color: aqua;
+        font-size: 20px;
+    }
+    .button-container button:hover {
+        transform: scale(1.05);
+    }
 
 .page {
     width: 60vw;
+    min-width: 500px;
     margin: auto;
     padding: 3rem;
     border: 10px ridge aqua;
     background-color: #fee7f1;
     text-align: center;
 }
-
-.page h1 {
-    font-family: DancingScript;
-    font-size: 48px;
-    background-color: rgba(0, 0, 0, 0.03);
-    padding: 1rem 0;
-}
+    .page h1 {
+        font-family: DancingScript;
+        font-size: 48px;
+        background-color: rgba(0, 0, 0, 0.03);
+        padding: 1rem 0;
+    }
+    .page p{
+        padding: 1rem 0rem;
+    }
+    .page > p {
+        margin-top: 40px;
+    }
 
 .hero-container {
     padding: 4rem 0rem;
@@ -77,38 +82,90 @@ html {
     letter-spacing: 1.8px;
     color: #9979b4;
 }
-
-.hero-container p:last-child{
-    text-align: end;
-    padding-right: 3rem;
-}
-
-.page p{
-    padding: 1rem 0rem;
-}
-
-.page > p {
-    margin-top: 40px;
-}
+    .hero-container p:last-child{
+        text-align: end;
+        padding-right: 3rem;
+    }
 
 .hours-container {
     width: 50%;
+    min-width: 300px;
     margin: auto;
     padding: 1rem;
     border: 3px dotted purple;
     border-radius: 10px;
 }
+    .day {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+    .day:nth-child(2n) {
+        background-color: rgba(0, 0, 0, 0.03);
+    }
 
-.day {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
+.menu-section {
+    border: 1px solid;
+    margin-top: 3rem;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(380px, 1fr) );
+    border: ridge 5px aqua;
 }
+    h2 {
+        text-decoration: underline purple;
+        letter-spacing: 3px;
+        font-size: 30px;
+        padding-top: 3rem;
+    }
+    .item-container {
+        display: grid;
+        grid: auto auto auto / 1fr 1fr;
+        padding: 1rem;
+    }
+    .item-container img {
+        grid-area: 1 / 2 / 4 / 3;
+        place-self: center;
+        height: 200px;
+        width: 200px;
+        opacity: 0.6;
+    }
+    .item-container p {
+        font-family: DancingScript;
+        font-size: 25px;
+    }
 
-.day:nth-child(2n) {
+    .item-container p:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .item-container p:nth-child(2) {
+        grid-area: 2 / 1 / 3 / 2;
+        align-self: end;
+    }
+    .item-container p:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 2;
+        place-self: center;
+    }
+
+
+.card {
+    width: 50%;
+    min-width: 384px;
+    margin: 4rem auto 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid: auto auto auto auto / 1fr auto;
     background-color: rgba(0, 0, 0, 0.03);
+    border: 3px solid #9979b4;
+    border-radius: 10px;
 }
+    .card img {
+        grid-area: 1 / 2 / 5 / 3;
+        width: 100%;
+    }
 
-.active {
+button.active {
     color: purple;
+    /* background-color: rgba(0, 225, 255, 1); */
+    border: 2px solid purple;
 }
